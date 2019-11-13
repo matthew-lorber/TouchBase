@@ -107,6 +107,9 @@ function start() {
 start();
 
 function writeToDB(username, data) {
-    sequelize.query("insert into chatroom_db.chats (username, message) values ('" + username + "', '" + data + "')", { type: sequelize.QueryTypes.INSERT })
+    var count = data.toString().length;
+    var count2 = 2*count;
+    var count3 = 3*count;
+    sequelize.query("insert into chatroom_db.chats (username, message, varX, varY, varZ) values ('" + username + "', '" + data + "', " + count + ", " + count2 + ", " + count3 + ")", { type: sequelize.QueryTypes.INSERT })
     return false;
 }
