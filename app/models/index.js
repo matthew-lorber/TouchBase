@@ -1,14 +1,9 @@
-const express = require('express');
-const app = express();
-const http = require('http').Server(app);
 var fs = require("fs");
 var path = require("path");
 var Sequelize = require("sequelize");
 var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "production";
 var config = require(__dirname + "/../config/config.json")[env];
-const io = require('socket.io')(http);
-const port = process.env.PORT || 3000;
 var db = {};
 
 if (config.use_env_variable) {
@@ -35,15 +30,5 @@ Object.keys(db).forEach(function(modelName) {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
-app.use(express.static(__dirname + '/public'));
-
-function onConnection(socket){
-  socket.on('drawing', (data) => socket.broadcast.emit('drawing', data));
-}
-
-io.on('connection', onConnection);
-
-http.listen(port, () => console.log('listening on port ' + port));
 
 module.exports = db;
