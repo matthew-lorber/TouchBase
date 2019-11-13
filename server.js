@@ -10,10 +10,10 @@ var PORT = process.env.PORT || 8080;
 var env = process.env.NODE_ENV || "production";
 require("./app/config/config.js")[env];
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize(process.env.MYSQL_DB, "root", "Il0ve0scar", {
-    host: "localhost",
-    dialect: "mysql"
-});
+// var sequelize = new Sequelize(process.env.MYSQL_DB, "root", "Il0ve0scar", {
+//     host: "localhost",
+//     dialect: "mysql"
+// });
 
 if (config.use_env_variable) {
     var sequelize = new Sequelize(process.env[config.use_env_variable], config);
