@@ -10,10 +10,7 @@ var PORT = process.env.PORT || 3000;
 var env = process.env.NODE_ENV || "production";
 var config = require("./app/config/config.json")[env];
 var Sequelize = require("sequelize");
-// var sequelize = new Sequelize(process.env.MYSQL_DB, "root", "Il0ve0scar", {
-//     host: "localhost",
-//     dialect: "mysql"
-// });
+
 
 if (config.use_env_variable) {
     var sequelize = new Sequelize(process.env[config.use_env_variable], config);
@@ -97,9 +94,13 @@ io.on("connection", (socket) => {
 console.log("total Users online: " + numUsers);
 // db.sequelize.sync({ force: false }).then 
 function start() {
+
+
     server.listen(PORT, function() {
         console.log("listening on localhost:" + PORT);
     });
+
+
     //         app.listen(PORT, function() {
     //             console.log("App listening on PORT " + PORT);
     //         })
