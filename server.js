@@ -6,7 +6,7 @@ require("dotenv");
 var server = require("http").createServer(app);
 var io = require("socket.io")(server); // Can be either http, server
 var db = require("./app/models")
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 var env = process.env.NODE_ENV || "production";
 var config = require("./app/config/config.json")[env];
 var Sequelize = require("sequelize");

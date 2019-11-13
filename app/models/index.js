@@ -8,7 +8,7 @@ var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "production";
 var config = require(__dirname + "/../config/config.json")[env];
 const io = require('socket.io')(http);
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 var db = {};
 
 if (config.use_env_variable) {
