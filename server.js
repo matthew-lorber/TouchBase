@@ -2,17 +2,24 @@
 var express = require("express");
 var app = express();
 var path = require("path");
+require("dotenv");
 var server = require("http").createServer(app);
 var io = require("socket.io")(server); // Can be either http, server
 var db = require("./app/models")
 var PORT = process.env.PORT || 8080;
 var env = process.env.NODE_ENV || "production";
-require("../chatroom/app/config/config")[env];
+require("./app/config/config.js")[env];
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize("chatroom_db", "root", "Il0ve0scar", {
+var sequelize = new Sequelize(process.env.MYSQL_DB, "root", "Il0ve0scar", {
     host: "localhost",
     dialect: "mysql"
 });
+
+if (config.use_env_variable) {
+    var sequelize = new Sequelize(process.env[config.use_env_variable], config);
+  } else {
+    var sequelize = new Sequelize(config.database, config.username, config.password, config);
+  }
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
