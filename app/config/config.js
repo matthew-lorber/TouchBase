@@ -16,7 +16,8 @@ module.exports = {
         "dialect": "mysql"
     },
     "production": {
-        "use_env_variable": "JAWSDB_URL",
+        // "use_env_variable": "JAWSDB_URL",
+        "use_env_variable": "mysql://sxwl53txwa01eraj:qxc2ueu1oqs0rn2t@lolyz0ok3stvj6f0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/c8uqfusf09qdnwxt",
         "username": process.env.MYSQL_UN,
         "password": process.env.MYSQL_KEY,
         "database": process.env.MYSQL_DB,
