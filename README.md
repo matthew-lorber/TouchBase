@@ -17,8 +17,7 @@ This is a MySQL | Express | Node.js chat communication and whiteboarding app tha
 * [Nightmare](http://www.nightmarejs.org/) testing automation
 * [HTML5](https://en.wikipedia.org/wiki/HTML5) webpage markup language
 * [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets#CSS_3) style sheet language
-* [Sass](https://sass-lang.com/) CSS extension language
-* [jQuery](https://jquery.com/) simplify AJAX calls, DOM traversal and manipulation
+* [jQuery]() simplify AJAX calls, DOM traversal and manipulation
 * [D3.js](https://d3js.org/) data visualization components for DOM manipulation
 * [SVG](https://www.w3.org/Graphics/SVG/) graphics format for D3
 
@@ -28,16 +27,14 @@ This is a MySQL | Express | Node.js chat communication and whiteboarding app tha
     npm install --d
     node server.js
     // navigate to localhost:3000
+
 * TouchBase is currently deployed with [Heroku](https://www.heroku.com)
 
 ## Future Enhancements
 * [WebRTC](https://webrtc.org/) add as a realtime communication API
-* [Agora.io](https://www.agora.io/en/) add as a SDK + streaming provider
-* [Babelrc](https://babeljs.io/docs/en/6.26.3/babelrc) add as a JS compiler
 
 ## Credits
 Credit to [nadirlaskar](https://github.com/socketio/socket.io/commits?author=nadirlaskar) and [darrachequesne](https://github.com/socketio/socket.io/commits?author=darrachequesne) who made the app Amir forked for the whiteboard, and to  [darrachequesne](https://veteran.cg.gy/booknote3052/chat-angular-socket-server/commit/5704581024b5b7c50692f25bf759480908838880?expanded=1&view=inline), who created the socket chat forked by Ben.
 
 ## License
 MIT
-​
