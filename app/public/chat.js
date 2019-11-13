@@ -30,7 +30,7 @@ $(function() {
         if (data.numUsers === 1) {
             message += "there's 1 user online";
         } else {
-            message += "there are " + data.numUsers + " user's online";
+            message += "there are " + data.numUsers + " users online";
         }
         log(message);
     }
