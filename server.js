@@ -8,7 +8,7 @@ var io = require("socket.io")(server); // Can be either http, server
 var db = require("./app/models")
 var PORT = process.env.PORT || 8080;
 var env = process.env.NODE_ENV || "production";
-require("./app/config/config.js")[env];
+require("./app/config/config.json")[env];
 var Sequelize = require("sequelize");
 // var sequelize = new Sequelize(process.env.MYSQL_DB, "root", "Il0ve0scar", {
 //     host: "localhost",
